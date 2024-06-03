@@ -52,6 +52,8 @@ def home():
     img.seek(0)
     plot_url = base64.b64encode(img.getvalue()).decode()
 
+    plt.close()
+
     return render_template('index.html', plot_url=plot_url)
 
 if __name__ == '__main__':
